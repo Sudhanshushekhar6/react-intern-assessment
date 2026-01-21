@@ -1,24 +1,21 @@
-import type { JSX } from "react";
-import Home from "./pages/home";
-import Create from "./pages/create";
 
-type route = {
-    path: string
-    element: JSX.Element
-    index?: boolean
-}
+import HomePage from "./pages/home"
+import CreatePage from "./pages/create"
+import ArchivePage from "./pages/archive"
 
-const routes: route[] = [
-    {
-        path: "/",
-        element: <Home />,
-        index: true
-    },
-    {
-        path: "/create",
-        element: <Create />,
-    },
-
+const routes = [
+  {
+    index: true,
+    element: <HomePage />,
+  },
+  {
+    path: "create",
+    element: <CreatePage />,
+  },
+  {
+    path: "archive",
+    element: <ArchivePage />,
+  },
 ]
 
-export default routes;
+export default routes
